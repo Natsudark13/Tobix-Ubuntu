@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd"> 
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jstl/core"> 
+
+<h:head></h:head> 
+<body> 
+
+	<h2>Registrar Actividad</h2>
+	<h4>Por favor, llene los espacios en blanco con la información de la actividad: </h4>
+	<h:form id="registro">
+		
+		Encargado:  <h:selectOneMenu value="#{encargado.cedula}">
+    				<f:selectItems value="#{encargado.listaID}" />
+				</h:selectOneMenu>
+				<br></br><br></br>
+				
+		Bloque:  <h:selectOneMenu id="BloquePerteneciente" value ="#{bloque.tematica}" > 
+					<c:forEach items="#{bloque.bloquesE}" var="item" varStatus="itemIndex">
+    				<f:selectItem itemValue="#{bloque.getBloquesIndex( itemIndex.index ) }"/>
+  					</c:forEach> 
+				</h:selectOneMenu> <br></br><br></br>
+				
+		Nombre:  <h:inputText id="nombre" value="#{actividad.nombreActividad}" /><br></br><br></br>
+		Fecha:  <h:inputText id="fecha" value="#{actividad.fechaActividad}" /><br></br><br></br>
+		HoraInicio:  <h:inputText id="horaInicio" value="#{actividad.horaInicio}" /><br></br><br></br>
+		HoraFinal:  <h:inputText id="horaFinal" value="#{actividad.horaFinal}" /><br></br><br></br>
+		
+		Descripcion de la actividad:  <h:inputTextarea id="desc" value="#{actividad.descripcionActividad}" /><br></br><br></br>
+				
+		
+		Tipo:  <h:selectOneMenu id="Tipo_de_Actividad" value ="#{actividad.tipoActividad}" > 
+  				 <f:selectItem itemValue = "Charla"  /> 
+   				 <f:selectItem itemValue = "Taller"  /> 
+				 <f:selectItem itemValue = "Conversatorio" />
+				 <f:selectItem itemValue = "Story-telling"  /> 
+				</h:selectOneMenu> <br></br><br></br>
+		<h:commandButton id="registrar" action="#{actividadController.registrarActividad()}" value="Registrar Actividad" />
+		
+		
+	</h:form>
+
+</body> 
+</html>
