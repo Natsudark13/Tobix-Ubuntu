@@ -5,16 +5,29 @@ import javax.faces.bean.ManagedBean;
 
 //@SuppressWarnings("deprecation")
 @ManagedBean 
-public class Usuario {
+public abstract class Usuario {
 	protected int cedula;
 	protected String nombre;
 	protected String primerApellido;
 	protected String segundoApellido;
 	protected String sexo;
 	protected String correo;
+	private String contrasena;
 
 	public Usuario() {
 		
+	}
+	
+	public abstract int logIn(String email, String password);
+	
+	public abstract void crear();
+	
+	public String getContrasena() {
+		return contrasena;
+	}
+
+	public void setContrasena(String contrasena) {
+		this.contrasena = contrasena;
 	}
 	
 	public int getCedula() {

@@ -58,4 +58,16 @@ public class Encargado extends Usuario {
 	public void setInstitucionProcedencia(String pInstitucionProcedencia) {
 		this.institucionProcedencia = pInstitucionProcedencia;
 	}
+
+	@Override
+	public int logIn(String email, String password) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public void crear() {
+		// TODO Auto-generated method stub
+		
+	}
 }

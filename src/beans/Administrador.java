@@ -32,4 +32,10 @@ public class Administrador extends Usuario{
 		}
 		return x;
 	}
+
+	@Override
+	public void crear() {
+		// TODO Auto-generated method stub
+		
+	}
 }

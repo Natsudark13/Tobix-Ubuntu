@@ -31,7 +31,7 @@ public class Asistente extends Usuario{
 	}
 	
 
-	public void crearAsistente() {
+	public void crear() {
 		CRUD crud = new CRUD();
 		try {
 			crud.insertUser(this.cedula, this.sexo, this.correo, this.nombre, this.primerApellido, this.segundoApellido, this.contrasenaAsistente, this.entidadProcedencia);
@@ -39,14 +39,6 @@ public class Asistente extends Usuario{
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 		}
-	}
-
-	public String getContrasenaAsistente() {
-		return contrasenaAsistente;
-	}
-
-	public void setContrasenaAsistente(String contrasenaAsistente) {
-		this.contrasenaAsistente = contrasenaAsistente;
 	}
 
 	public String getEntidadProcedencia() {

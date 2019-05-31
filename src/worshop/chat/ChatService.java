@@ -118,6 +118,8 @@ public class ChatService {
 		MessageResponse assistantResponse = service.message(options).execute();
 		System.out.println(assistantResponse);
 		
+		
+		
 		// Print the output from dialog, if any.
 		List<String> assistantResponseList = assistantResponse.getOutput().getText();
 		JSONObject object = new JSONObject();
