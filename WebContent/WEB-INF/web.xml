@@ -21,7 +21,11 @@
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.jsf</url-pattern>
     </servlet-mapping>
+<<<<<<< HEAD
     <servlet-mapping>
+=======
+     <servlet-mapping>
+>>>>>>> 1cbbc31f273b7be7c34ca6b2c9331df6a3b7c8ad
         <servlet-name>Faces Servlet</servlet-name>
         <url-pattern>*.xhtml</url-pattern>
     </servlet-mapping>
