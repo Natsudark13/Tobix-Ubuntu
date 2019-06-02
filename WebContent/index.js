@@ -22,7 +22,7 @@ class App extends React.Component {
     	
         var ctxStr = JSON.stringify(this.state.ctx);
     	fetch(`http://localhost:9080/WatsonAssistantChat/chatbot/chatservice/?conversationMsg=${encodeURIComponent(text)}&conversationCtx=${encodeURIComponent(ctxStr)}`)
-    	//fetch(`https://maracatones.mybluemix.net/WatsonAssistantChat/chatbot/chatservice/?conversationMsg=${encodeURIComponent(text)}&conversationCtx=${encodeURIComponent(ctxStr)}`)
+    	//fetch(`https://watsonassistantchat-tobix.mybluemix.net/WatsonAssistantChat/chatbot/chatservice/?conversationMsg=${encodeURIComponent(text)}&conversationCtx=${encodeURIComponent(ctxStr)}`)
         .then((response) => {
           return response.json()
         })
